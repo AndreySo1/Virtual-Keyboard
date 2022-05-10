@@ -7,10 +7,110 @@
    <link rel="stylesheet" href="style.css">
    <title>Virtual-Keyboard</title>
 </head>
-<body>
-   <div class="keyboard">
+<body onload="load();">
+   <div class="wrap">
+   <div class="screen">
+      <input id="inputScreen" type="text" />
+   </div>
+   <div class="key-buttons">
+      <!-- <div id="VirtualKey">
+         <input id="btn1" type="button" onclick="input(this);" />
+         <input id="btn2" type="button" onclick="input(this);" />
+         <input id="btn3" type="button" onclick="input(this);" />
+         <input id="btn4" type="button" onclick="input(this);" />
+         <input id="btn5" type="button" onclick="input(this);" />
+         <input id="btn6" type="button" onclick="input(this);" />
+         <input id="btn7" type="button" onclick="input(this);" />
+         <input id="btn8" type="button" onclick="input(this);" />
+         <input id="btn9" type="button" onclick="input(this);" />
+         <input id="btn0" type="button" onclick="input(this)" />
+         <input id="btnDel" type="button" value="Backspace" onclick="del();" />
+         </div> -->
+         <div class="VirtualKey" id="VirtualKey">
+            <div class="line">
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="del();" />
+            </div>
+            <div class="line">
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            </div>
+            <div class="line">
+            <input class="shift" id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input class="shift" id="btn" type="button" onclick="input(this);" />
+            </div>
+            <div class="line">
+            <input class="shift" id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            </div>
+            <div class="line">
+            <input class="ctrl" id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input class="space" id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input class="ctrl" id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            <input id="btn" type="button" onclick="input(this);" />
+            </div>
+         </div>
+   </div> <!-- end key-buttons -->
+
+   <!-- <div class="keyboard">
       <div>Keyboard</div>
       <img src="./img/virtual-keyboard.png">
-   </div>
+   </div> -->
+
+</div> <!-- end wrap -->
+<script src="./script.js"></script>
 </body>
 </html>
