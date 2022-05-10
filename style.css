@@ -302,12 +302,18 @@ body {
   width: 60px;
 }
 
+.wrap .key-buttons .VirtualKey .line .symbol {
+  background-color: #414a58;
+  color: #fff;
+}
+
 .wrap .key-buttons .VirtualKey .line input {
+  border: 0;
   font-size: 15px;
   height: 40px;
   min-width: 40px;
   width: auto;
-  color: #fff;
+  color: #80807d;
   background-color: #333;
   font-weight: 600;
   border-radius: 4px;
