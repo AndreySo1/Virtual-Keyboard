@@ -1,13 +1,17 @@
 console.log('test');
 let count = document.querySelector('.count');
 let capsLock = true;
+let btnShift = false;
 
 function input(e) {
    let inputArea = document.getElementById('inputScreen');
    if(e.matches('.symbol')){
       inputArea.value = inputArea.value + e.value;   
       //count.innerHTML = inputArea.value.length;
-   }
+      if(btnShift){
+         load(false);
+      };
+   };
 }
 
 function backspace() {
@@ -18,7 +22,13 @@ function backspace() {
 
 function enter() {
    let inputArea = document.getElementById('inputScreen');
-   inputArea.value = inputArea.value + "<br>";
+   inputArea.value = inputArea.value + '\r\n';
+}
+
+function shift() {
+   console.log('Shift');
+   btnShift = true;
+   load(true);
 }
 
 function caps() {
