@@ -307,6 +307,10 @@ body {
   color: #fff;
 }
 
+.wrap .key-buttons .VirtualKey .line .tab {
+  width: 50px;
+}
+
 .wrap .key-buttons .VirtualKey .line input {
   border: 0;
   font-size: 15px;
@@ -317,5 +321,12 @@ body {
   background-color: #333;
   font-weight: 600;
   border-radius: 4px;
+  padding: 0;
+}
+
+.wrap .key-buttons .VirtualKey .line input:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-color: aquamarine;
 }
 /*# sourceMappingURL=style.css.map */

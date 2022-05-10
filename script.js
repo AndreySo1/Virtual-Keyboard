@@ -2,7 +2,9 @@ console.log('test');
 
 function input(e) {
    let inputArea = document.getElementById('inputScreen');
-   inputArea.value = inputArea.value + e.value;
+   if(e.matches('.symbol')){
+      inputArea.value = inputArea.value + e.value;
+   }
 }
 
 function del() {
@@ -19,7 +21,7 @@ function load() {
       'Ctrl','Win','Alt',' ','Alt','Ctrl','<','v','>'
    ];
 
-   for (i = 0; i < buttonArray.length; i++) {
+   for(i = 0; i < buttonArray.length; i++) {
            let btn = document.querySelectorAll('[type="button"]');;
            btn[i].value = buttonArray[i];
        }
