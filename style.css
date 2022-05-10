@@ -339,4 +339,9 @@ body {
   background-color: #5571ee;
   color: #fff;
 }
+
+.lang {
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
 /*# sourceMappingURL=style.css.map */
