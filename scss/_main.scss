@@ -45,9 +45,10 @@ body{
                width: 50px;
             }
             .active{
-               border-width: 3px;
-               border-style: solid;
-               border-color: aquamarine;
+               // border-width: 3px;
+               // border-style: solid;
+               // border-color: aquamarine;
+               background-color: #5571ee;
                color: #fff;
             }
             input{
@@ -65,6 +66,10 @@ body{
                   border-width: 3px;
                   border-style: solid;
                   border-color: aquamarine;
+               }
+               &:focus{
+                  background-color: #5571ee;
+                  color: #fff;
                }
             }
          }

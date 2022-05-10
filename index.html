@@ -9,23 +9,14 @@
 </head>
 <body onload="load();">
    <div class="wrap">
-   <div class="screen">
+      <!-- <div>String length: <span class="count">0</span></div> -->
+   <!-- <div class="screen">
       <input id="inputScreen" type="text" />
+   </div> -->
+   <div class="screen">
+      <textarea id="inputScreen"></textarea>
    </div>
    <div class="key-buttons">
-      <!-- <div id="VirtualKey">
-         <input id="btn1" type="button" onclick="input(this);" />
-         <input id="btn2" type="button" onclick="input(this);" />
-         <input id="btn3" type="button" onclick="input(this);" />
-         <input id="btn4" type="button" onclick="input(this);" />
-         <input id="btn5" type="button" onclick="input(this);" />
-         <input id="btn6" type="button" onclick="input(this);" />
-         <input id="btn7" type="button" onclick="input(this);" />
-         <input id="btn8" type="button" onclick="input(this);" />
-         <input id="btn9" type="button" onclick="input(this);" />
-         <input id="btn0" type="button" onclick="input(this)" />
-         <input id="btnDel" type="button" value="Backspace" onclick="del();" />
-         </div> -->
          <div class="VirtualKey" id="VirtualKey">
             <div class="line">
             <input id="btn" type="button" onclick="input(this);" />
@@ -41,7 +32,7 @@
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
-            <input class="shift" id="btn" type="button" onclick="del();" />
+            <input class="shift" id="btn" type="button" onclick="backspace();" />
             </div>
 
             <div class="line">
@@ -63,7 +54,7 @@
             </div>
 
             <div class="line">
-            <input class="shift caps active" id="btn" type="button" onclick="caps();" />
+            <input class="shift caps" id="btn" type="button" onclick="caps();" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
@@ -75,7 +66,7 @@
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
             <input class="symbol" id="btn" type="button" onclick="input(this);" />
-            <input class="shift" id="btn" type="button" onclick="input(this);" />
+            <input class="shift" id="btn" type="button" onclick="enter();" />
             </div>
 
             <div class="line">

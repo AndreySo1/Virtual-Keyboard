@@ -1,17 +1,24 @@
 console.log('test');
-
-let capsLock = false;
+let count = document.querySelector('.count');
+let capsLock = true;
 
 function input(e) {
    let inputArea = document.getElementById('inputScreen');
    if(e.matches('.symbol')){
-      inputArea.value = inputArea.value + e.value;
+      inputArea.value = inputArea.value + e.value;   
+      //count.innerHTML = inputArea.value.length;
    }
 }
 
-function del() {
+function backspace() {
    let inputArea = document.getElementById("inputScreen");
    inputArea.value = inputArea.value.substr(0, inputArea.value.length - 1);
+   //count.innerHTML = inputArea.value.length;
+}
+
+function enter() {
+   let inputArea = document.getElementById('inputScreen');
+   inputArea.value = inputArea.value + "<br>";
 }
 
 function caps() {
@@ -28,7 +35,7 @@ function caps() {
    }
 }
 
-function load(caps = true) {
+function load(caps = false) {
    let offCaps = [
       '`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
       'Tab','q','w','e','r','t','y','u','i','o','p','[',']','/','DEL',

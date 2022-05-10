@@ -312,9 +312,7 @@ body {
 }
 
 .wrap .key-buttons .VirtualKey .line .active {
-  border-width: 3px;
-  border-style: solid;
-  border-color: aquamarine;
+  background-color: #5571ee;
   color: #fff;
 }
 
@@ -335,5 +333,10 @@ body {
   border-width: 3px;
   border-style: solid;
   border-color: aquamarine;
+}
+
+.wrap .key-buttons .VirtualKey .line input:focus {
+  background-color: #5571ee;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
