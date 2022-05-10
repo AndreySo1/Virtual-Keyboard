@@ -16,6 +16,11 @@ function input(e) {
    };
 }
 
+function tab(){
+   let inputArea = document.getElementById('inputScreen');
+   inputArea.value = inputArea.value + '     ';
+}
+
 function backspace() {
    let inputArea = document.getElementById("inputScreen");
    inputArea.value = inputArea.value.substr(0, inputArea.value.length - 1);
