@@ -2,6 +2,7 @@ console.log('test');
 let count = document.querySelector('.count');
 let capsLock = true;
 let btnShift = false;
+let lang = 'en';
 
 function input(e) {
    let inputArea = document.getElementById('inputScreen');
@@ -9,7 +10,8 @@ function input(e) {
       inputArea.value = inputArea.value + e.value;   
       //count.innerHTML = inputArea.value.length;
       if(btnShift){
-         load(false);
+         load(false, lang);
+         btnShift = false;
       };
    };
 }
@@ -28,7 +30,7 @@ function enter() {
 function shift() {
    console.log('Shift');
    btnShift = true;
-   load(true);
+   load(true, lang);
 }
 
 function caps() {
@@ -37,15 +39,28 @@ function caps() {
    button.classList.toggle('active');
 
    if (capsLock){
-      load(true);
+      load(true, lang);
       capsLock = false;
    } else { 
-      load(false);
+      load(false, lang);
       capsLock = true;
    }
 }
 
-function load(caps = false) {
+function win(){
+   console.log(lang);
+   if (lang == 'en'){
+      load(false,'by');
+      return lang='by';
+   };
+   if (lang == 'by'){
+      load(false,'en');
+      return lang='en';
+   };
+}
+
+function load(capsLock2 = false, lang2='en') {
+   
    let offCaps = [
       '`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
       'Tab','q','w','e','r','t','y','u','i','o','p','[',']','/','DEL',
@@ -62,9 +77,41 @@ function load(caps = false) {
       'Ctrl','Win','Alt',' ','Alt','Ctrl','<','v','>'
    ];
 
+   let onCapsBy = [
+      '`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
+      'Tab','Й','Ц','У','К','Е','Н','Г','Ш','Щ','З','Х','Ъ','/','DEL',
+      'Caps Lock','Ф','Ы','В','А','П','Р','О','Л','Д','Ж','Э','ENTER',
+      'Shift','Я','Ч','С','М','И','Т','Ь','Б','Ю','.','/','^','Shift',
+      'Ctrl','Win','Alt',' ','Alt','Ctrl','<','v','>'
+   ];
+
+   let offCapsBy = [
+      '`','1','2','3','4','5','6','7','8','9','0','-','=','Backspace',
+      'Tab','й','ц','у','к','е','н','г','ш','щ','з','х','ъ','/','DEL',
+      'Caps Lock','ф','ы','в','а','п','р','о','л','д','ж','э','ENTER',
+      'Shift','я','ч','с','м','и','т','ь','б','ю','.','/','^','Shift',
+      'Ctrl','Win','Alt',' ','Alt','Ctrl','<','v','>'
+   ];
+
    let buttonArray;
-   if (caps){ buttonArray = onCaps;
-   } else buttonArray = offCaps;
+
+   if (capsLock2 && lang2=='en'){buttonArray = onCaps;};
+   if (capsLock2 && lang2=='by'){buttonArray = onCapsBy;};
+   if (!capsLock2 && lang2=='en'){buttonArray = offCaps;};
+   if (!capsLock2 && lang2=='by'){buttonArray = offCapsBy;};
+
+   console.log(capsLock2 && lang2=='en');
+   console.log(capsLock2 && lang2=='by');
+   console.log(!capsLock2 && lang2=='en');
+   console.log(!capsLock2 && lang2=='by');
+   // if (capsLock2){ 
+   //    if(lang2 == 'en'){buttonArray = onCaps;};
+   //    if(lang2 == 'by'){buttonArray = onCapsBy;};
+      
+   // } else {
+   //    if(lang2 == 'en') {buttonArray = offCaps;};
+   //    if(lang2 == 'by') {buttonArray = offCapsBy;};
+   // }
 
    for(i = 0; i < buttonArray.length; i++) {
            let btn = document.querySelectorAll('[type="button"]');;
