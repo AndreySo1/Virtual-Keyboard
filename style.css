@@ -307,6 +307,10 @@ body {
   color: #fff;
 }
 
+.wrap .key-buttons .VirtualKey .line .symbol:first-child {
+  background-color: #333;
+}
+
 .wrap .key-buttons .VirtualKey .line .tab {
   width: 50px;
 }
