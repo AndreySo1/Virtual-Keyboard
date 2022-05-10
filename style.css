@@ -311,6 +311,13 @@ body {
   width: 50px;
 }
 
+.wrap .key-buttons .VirtualKey .line .active {
+  border-width: 3px;
+  border-style: solid;
+  border-color: aquamarine;
+  color: #fff;
+}
+
 .wrap .key-buttons .VirtualKey .line input {
   border: 0;
   font-size: 15px;

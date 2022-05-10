@@ -44,6 +44,12 @@ body{
             .tab{
                width: 50px;
             }
+            .active{
+               border-width: 3px;
+               border-style: solid;
+               border-color: aquamarine;
+               color: #fff;
+            }
             input{
                border: 0;
                font-size: 15px;
